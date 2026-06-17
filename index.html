@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediatorLab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">MediatorLab</div>
+    <nav class="nav-links">
+      <button data-target="home" class="nav-button active">Home</button>
+      <button data-target="categories" class="nav-button">Categorieën</button>
+      <button data-target="dashboard" class="nav-button">Dashboard</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="home" class="page active">
+      <div class="hero">
+        <h1>Word een betere mediator</h1>
+        <p>Oefen met realistische casussen, kies de beste interventie en ontwikkel een neutrale, actieve houding.</p>
+        <div class="hero-buttons">
+          <button id="startTraining">Start training</button>
+        </div>
+      </div>
+      <div class="overview-cards">
+        <article>
+          <h2>Neutraal blijven</h2>
+          <p>Ontdek hoe je een gelijkwaardige rol behoudt zonder partij te kiezen.</p>
+        </article>
+        <article>
+          <h2>Actief luisteren</h2>
+          <p>Start met aandachtig luisteren naar zorgen, belangen en standpunten.</p>
+        </article>
+        <article>
+          <h2>Casusbibliotheek</h2>
+          <p>Kies uit categorieën als Werk, School, Familie en Online.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="categories" class="page">
+      <div class="section-header">
+        <h1>Categorieën</h1>
+        <p>Kies een categorie en selecteer een casus om de oefening te starten.</p>
+      </div>
+      <div id="categoryList" class="grid"></div>
+    </section>
+
+    <section id="caseListPage" class="page">
+      <div class="section-header">
+        <button id="backToCategoriesList" class="secondary-button">← Terug naar categorieën</button>
+        <h1 id="caseListHeading">Casussen</h1>
+      </div>
+      <div id="caseList" class="case-list"></div>
+    </section>
+
+    <section id="caseDetail" class="page">
+      <div class="section-header">
+        <button id="backToCategories" class="secondary-button">← Terug naar categorieën</button>
+        <h1 id="caseTitle">Casus</h1>
+      </div>
+      <div class="case-detail">
+        <p id="caseDescription"></p>
+        <div class="case-full-text">
+          <h2>Volledige casus</h2>
+          <div id="caseFullText"></div>
+        </div>
+        <div class="case-meta">
+          <div><strong>Perspectief A:</strong> <span id="caseA"></span></div>
+          <div><strong>Perspectief B:</strong> <span id="caseB"></span></div>
+        </div>
+        <div class="case-info-grid">
+          <div><strong>Standpunten</strong><p id="casePositions"></p></div>
+          <div><strong>Zorgen</strong><p id="caseConcerns"></p></div>
+          <div><strong>Belangen</strong><p id="caseInterests"></p></div>
+        </div>
+
+        <div class="references-panel">
+          <h2>📚 Bronnen en sleutelteksten</h2>
+          <div id="referencesMaterial"></div>
+        </div>
+
+        <button id="startExercise" class="primary-button">Start oefening</button>
+      </div>
+    </section>
+
+    <section id="instructions" class="page">
+      <div class="section-header">
+        <button id="backToCaseFromInstructions" class="secondary-button">← Terug naar casus</button>
+        <h1>Instructies</h1>
+        <p>Bekijk eerst hoe de oefening werkt voordat je begint.</p>
+      </div>
+      <div class="instructions-panel">
+        <h2>Hoe werkt deze training?</h2>
+        <ol>
+          <li>Lees de casus goed door.</li>
+          <li>Kies bij iedere vraag het beste antwoord.</li>
+          <li>Je krijgt direct feedback na je antwoord.</li>
+          <li>Na afloop zie je wat je goed en fout had.</li>
+          <li>De verbeterpunten zijn gebaseerd op de vragen die je fout hebt beantwoord.</li>
+        </ol>
+
+        <h2>Mediator Basisprincipes</h2>
+        <div class="principles-box">
+          <div class="principle">
+            <strong>Neutraliteit:</strong> Neem geen positie in. Erken beide partijen even goed.
+          </div>
+          <div class="principle">
+            <strong>Actief Luisteren:</strong> Vraag door, herhaal wat je hoort, en zoek naar onderliggende gevoelens.
+          </div>
+          <div class="principle">
+            <strong>Emotieherkenning:</strong> Erken gevoelens om het gesprek veilig te houden.
+          </div>
+          <div class="principle">
+            <strong>Belangen ontdekken:</strong> Ga voorbij standpunten en zoek naar onderliggende behoeften.
+          </div>
+          <div class="principle">
+            <strong>Structuur bewaken:</strong> Zorg voor respectvolle gespreksvoering en beurtverdeling.
+          </div>
+        </div>
+
+        <h2>Tips voor dit traject</h2>
+        <ul>
+          <li>Vermijd oordelen of het bepalen van gelijk/ongelijk.</li>
+          <li>Stel vragen in plaats van uitspraken te doen.</li>
+          <li>Erken gevoelens zonder ze te minimaliseren.</li>
+          <li>Zoek naar gemeenschappelijke belangen.</li>
+          <li>Laat de partijen zelf oplossingen bedenken.</li>
+        </ul>
+
+        <button id="beginPractice" class="primary-button">Begin oefening</button>
+      </div>
+    </section>
+
+    <section id="practice" class="page">
+      <div class="section-header">
+        <button id="backToCase" class="secondary-button">← Terug naar casus</button>
+        <h1>Oefen als mediator</h1>
+        <p>Beantwoord de meerkeuzevragen en ontvang directe feedback.</p>
+      </div>
+      <div class="practice-panel">
+        <div class="practice-info">
+          <p><strong>Casus:</strong> <span id="practiceCaseName"></span></p>
+          <p><strong>Vraag:</strong> <span id="questionText"></span></p>
+        </div>
+        <div id="answerButtons" class="answers"></div>
+        <div id="feedbackBox" class="feedback"></div>
+        <div class="practice-footer">
+          <p>Score: <span id="currentScore">0</span>/<span id="maxScore">0</span></p>
+          <button id="nextQuestion" class="primary-button">Volgende vraag</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="result" class="page">
+      <div class="section-header">
+        <h1>Resultaat</h1>
+        <p>Bekijk je prestaties en wat je kunt verbeteren als mediator.</p>
+      </div>
+      <div class="result-panel">
+        <div class="result-summary">
+          <div><strong>Eindscore:</strong> <span id="finalScore"></span></div>
+          <div><strong>Goed:</strong> <span id="correctCount"></span></div>
+          <div><strong>Fout:</strong> <span id="incorrectCount"></span></div>
+        </div>
+        <div class="result-feedback">
+          <h3>Feedback op antwoorden</h3>
+          <p class="result-note">De verbeterpunten hieronder zijn gebaseerd op de vragen die je fout hebt beantwoord.</p>
+          <ul id="feedbackList"></ul>
+        </div>
+        <div class="result-insights">
+          <div>
+            <h3>Verbeterpunten</h3>
+            <ul id="improvementsList"></ul>
+          </div>
+        </div>
+        <button id="nextCase" class="primary-button">Volgende casus</button>
+      </div>
+    </section>
+
+    <section id="dashboard" class="page">
+      <div class="section-header">
+        <h1>Dashboard</h1>
+        <p>Volg je voortgang als mediator en bekijk je vaardigheidsscores.</p>
+      </div>
+      <div class="dashboard-grid">
+        <div class="dashboard-card">
+          <h2>Totaalscore</h2>
+          <p id="dashboardTotalScore">0</p>
+        </div>
+        <div class="dashboard-card">
+          <h2>Voortgang</h2>
+          <p id="dashboardProgress">Nog geen vragen beantwoord</p>
+        </div>
+        <div class="dashboard-card skills-card">
+          <h2>Vaardigheidsscores</h2>
+          <div class="skill-row"><span>Neutraliteit</span><span id="skillNeutrality">0</span></div>
+          <div class="skill-row"><span>Luisteren</span><span id="skillListening">0</span></div>
+          <div class="skill-row"><span>Emoties</span><span id="skillEmotion">0</span></div>
+          <div class="skill-row"><span>Belangen</span><span id="skillInterests">0</span></div>
+          <div class="skill-row"><span>Structuur</span><span id="skillStructure">0</span></div>
+        </div>
+        <div class="dashboard-card">
+          <h2>Badges</h2>
+          <div id="badgeList" class="badge-list">
+            <span class="badge">Mediator in opleiding</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>MediatorLab — oefen je vaardigheden in mediation</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

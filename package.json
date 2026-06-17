@@ -1,0 +1,11 @@
+{
+  "name": "mediatie-lab",
+  "version": "1.0.0",
+  "description": "Mediator training single-page app",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "author": "",
+  "license": "MIT"
+}
