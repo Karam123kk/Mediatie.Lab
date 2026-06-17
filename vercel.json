@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "name": "mediatie-lab",
-  "builds": [
-    { "src": "index.html", "use": "@vercel/static" }
-  ],
+  "buildCommand": "echo 'No build needed'",
+  "public": ".",
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/(.+)", "dest": "/$1" },
+    { "src": "/", "dest": "/index.html" }
   ]
 }
